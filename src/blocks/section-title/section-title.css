@@ -1,0 +1,9 @@
+.section-title {
+    font-family: 'Merriweather';
+    text-transform: uppercase;
+    color: var(--text-main-color);
+    max-width: 806px;
+    line-height: 1.2;
+    font-size: 54px;
+    font-weight: 400;
+  }

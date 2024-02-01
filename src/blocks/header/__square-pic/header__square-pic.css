@@ -1,0 +1,9 @@
+.header__square-pic {
+    position: absolute;
+    right: 0;
+    top: 64px;
+    height: 660px;
+    width: 660px;
+    background-image: url(../../../images/rotate-img.svg);
+    
+  }
