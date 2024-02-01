@@ -4,7 +4,7 @@
     align-items: center;*/
     margin-top: 100px;
     max-width: 1222px;
-    margin: 80px auto 64px;
+    margin: 80px auto 0;
   }
 
 .description__intro {
@@ -16,6 +16,10 @@
   font-weight: 400;
   max-width: 764px;
   margin-right: 32px;
+}
+
+.description__event-details{
+  margin-top: 64px;
 }
 
 .description__span {
@@ -43,7 +47,7 @@
   border-bottom-width: 2px
 }
 
-.description__table tr th,td {
+.description__table tr th, .description__table tr td {
   padding: 16px 16px 16px 0;
 }
 
@@ -51,10 +55,3 @@
   border-bottom: none;
 }
 
-.description__table th:last-of-type{
-  padding-bottom: 0;
-}
-
-.description__table td:last-of-type{
-  padding-bottom: 0;
-}

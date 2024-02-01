@@ -1,0 +1,13 @@
+.promoline__item {
+    animation: scroll 12s infinite linear;
+   font-family: 'Merriweather';
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, 0)
+    }
+}

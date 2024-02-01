@@ -1,0 +1,10 @@
+.tablee {
+}
+
+.tablee .tablee__last-row td, .tablee .tablee__last-row th{
+    padding-bottom: 0;
+}
+
+.tablee .tablee__first-row td, .tablee .tablee__first-row th{
+    padding-top: 0;
+}
