@@ -4,13 +4,25 @@
     position: relative;
 }
 
+.players__cards-container {
+    overflow:hidden;
+    margin-top: 60px;
+}
+
 .players__nav-button {
     border: none;
     outline: none;
-    background: transparent;
+    background-color: #313131;
+    border-radius: 50%;
     width: 44px;
     height: 44px;
     background-size: contain;
+
+    transition: background-color .2s ease-in;
+}
+
+.players__nav-button:hover {
+    background-color: #FBCE51;
 }
 
 .players__pagination {
@@ -39,6 +51,11 @@
 @media screen and (max-width: 768px) {
     .players {
         max-width: calc(100% - 40px);
+        margin-bottom: 100px;
+    }
+
+    .players__cards-container {
+        margin-top: 40px;
     }
     .players__nav-button {
 

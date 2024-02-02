@@ -75,16 +75,46 @@ const stepListBlock = document.querySelector('.steps__list');
 const stepNextButton = document.querySelector('.steps__nav-button_right');
 const stepPrevButton = document.querySelector('.steps__nav-button_left');
 
+function updateStepsAndPags() {
+    stepListBlock.setAttribute('style',`transform:translateX(-${percentsPag}%);`);
+
+    if (percentsPag === 0) {
+        stepPrevButton.disabled = true;
+    } else {
+        stepPrevButton.disabled = false;
+    }
+    if (percentsPag === 400) {
+        stepNextButton.disabled = true;
+    } else {
+        stepNextButton.disabled = false;
+    }
+}
+updateStepsAndPags();
+setPag(percentsPag);
+function setPag(newPag) {
+    document.querySelector(`.steps__paggy_${percentsPag}`).classList.remove('steps__paggy_active');
+    percentsPag = newPag;
+    document.querySelector(`.steps__paggy_${percentsPag}`).classList.add('steps__paggy_active');
+    updateStepsAndPags();
+}
+
+Array.from(document.querySelectorAll('.steps__paggy')).forEach((paggy)=>{
+    paggy.addEventListener('click', (evt)=>{
+        setPag(Number(evt.target.dataset.pag));
+        updateStepsAndPags();
+    })
+})
+
 stepNextButton.addEventListener('click', () => {
     if (percentsPag !== 400) {
-        percentsPag+=100;
-        stepListBlock.setAttribute('style',`transform:translateX(-${percentsPag}%);`);
+        setPag(percentsPag + 100);
+        updateStepsAndPags();
     }
 });
 
 stepPrevButton.addEventListener('click', () => {
     if (percentsPag !== 0) {
-        percentsPag-=100;
-        stepListBlock.setAttribute('style',`transform:translateX(-${percentsPag}%);`);
+        setPag(percentsPag - 100);
+        updateStepsAndPags();
     }
 });

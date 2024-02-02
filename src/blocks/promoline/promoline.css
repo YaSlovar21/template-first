@@ -1,8 +1,16 @@
 .promoline__item {
-    animation: scroll 12s infinite linear;
+ animation: scroll 12s infinite linear;
    font-family: 'Merriweather';
+   font-size: 22px;
+   padding: 18px 0;
 }
 
+@media screen and (max-width: 768px) {
+    .promoline__item {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+}
 @keyframes scroll {
     0% {
         transform: translate(0, 0);
@@ -11,3 +19,4 @@
         transform: translate(-50%, 0)
     }
 }
+

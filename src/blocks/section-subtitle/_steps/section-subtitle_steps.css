@@ -2,3 +2,10 @@
   max-width: 280px;
   line-height: 1.2;    
 }
+
+@media screen and (max-width: 768px) {
+  .section-subtitle_steps {
+    max-width: calc(100% - 40px);
+    margin-top: 12px;
+  }
+}

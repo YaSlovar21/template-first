@@ -23,7 +23,7 @@
   </header>
   <main>
     <div class="promoline w-full bg-[--span-orange] overflow-hidden">
-      <div class="promoline__item flex w-[200%] text-[22px] uppercase text-cyan-50 py-[18px]">
+      <div class="promoline__item flex w-[200%] uppercase text-cyan-50">
         <span class="w-full whitespace-nowrap"> Дело помощи утопающим — дело рук самих утопающих!
         Шахматы двигают вперед не только культуру, но и экономику!
         Лед тронулся, господа присяжные заседатели!</span>
@@ -71,6 +71,7 @@
     <section class="steps">
       <h2 class="section-title">Этапы преображения Васюков</h2>
       <p class="section-subtitle section-subtitle_steps steps__subtitle">Будущие источники обогащения васюкинцев</p>
+      <img class="steps__poster" src="<%=require('./images/samolet.png')%>" alt="Самолет в Рио-Де-Женейро">
       <div class="steps__list-container">
         <ol class="steps__list">
           <li class="steps__list-item">Строительство железнодорожной магистрали Москва-Васюки</li>
@@ -81,21 +82,22 @@
           <li class="steps__list-item">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</li>
           <li class="steps__list-item">
             <span class="max-w-[446px]">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</span>
-            <img class="steps__poster" src="<%=require('./images/samolet.png')%>" alt="Самолет в Сан-франциско">
           </li>
         </ol>
       </div>
       <div class="steps__pagination">
         <button class="steps__nav-button steps__nav-button_left mr-auto"></button>
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
+        <span class="steps__paggy steps__paggy_0" data-pag="0"></span>
+        <span class="steps__paggy steps__paggy_100" data-pag="100"></span>
+        <span class="steps__paggy steps__paggy_200" data-pag="200"></span>
+        <span class="steps__paggy steps__paggy_300" data-pag="300"></span>
+        <span class="steps__paggy steps__paggy_400" data-pag="400"></span>
         <button class="steps__nav-button steps__nav-button_right ml-auto"></button>
       </div>
     </section>
     <section class="players">
       <h2 class="section-title">Участники турнира</h2>
-      <div class="overflow-hidden mt-[60px]">
+      <div class="players__cards-container">
         <ul class="flex justify-center mx-auto players-container">
           <li class="card">
             <img src="<%=require('./images/default-player-ava.png')%>" alt="Участник">
