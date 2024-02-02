@@ -104,7 +104,7 @@ module.exports = {
       templateParameters: {
         canonicalURL,
       },
-      title: "Проектирование и продажа инженерного оборудования для водоснабжения",
+      title: "Международный васюкинский турнир по шахматам",
       template: './src/index.html', // путь к файлу index.html
       chunks: ['index', 'all'],
     }),

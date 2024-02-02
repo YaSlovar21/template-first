@@ -1,0 +1,11 @@
+.description__first{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+    .description__first {
+        flex-direction: column;
+    }
+}

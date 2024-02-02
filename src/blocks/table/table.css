@@ -8,3 +8,14 @@
 .tablee .tablee__first-row td, .tablee .tablee__first-row th{
     padding-top: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .tablee .tablee__last-row td, .tablee .tablee__last-row th{
+        padding-bottom: 16px;
+    }
+    
+    .tablee .tablee__first-row td, .tablee .tablee__first-row th{
+        padding-top: 16px;
+    }
+    
+}

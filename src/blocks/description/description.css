@@ -7,6 +7,14 @@
     margin: 80px auto 0;
   }
 
+@media screen and (max-width: 1024px) {
+    .description {
+        max-width: calc(100% - 40px);
+        margin-top: 48px;
+    }
+}
+  
+
 .description__intro {
   color: var(--text-main-color);
   font-family: 'Merriweather';
@@ -18,10 +26,6 @@
   margin-right: 32px;
 }
 
-.description__event-details{
-  margin-top: 64px;
-}
-
 .description__span {
   color: var(--span-orange);
   font-weight: 600;
@@ -31,27 +35,52 @@
   
 }
 
-.description__table {
-
+.description__image_mob_view {
+  display: none;
+  
 }
 
-.description__table th {
-  border-right-color: #D0D0D0;
-  border-right-width: 2px;
-  opacity: .7;
+.description__game-photo {
+  position: relative;
+  right: 60px;
+  bottom: 40px;
 }
 
-.description__table tr {
-  text-align: left;
-  border-bottom-color: #D0D0D0;
-  border-bottom-width: 2px
+.description__sto{
+  display: inline-block;
+  position: relative;
+  margin-right: 12px;
 }
 
-.description__table tr th, .description__table tr td {
-  padding: 16px 16px 16px 0;
+.description__sto::before {
+  content: '';
+  position: absolute;
+  width: calc(100% + 3px);
+  height: 2px;
+  background-color: #F54932;
+  top:50%;
+  left: -3px;
+  border-radius: 1px;
+  
 }
 
-.description__table tr:last-of-type {
-  border-bottom: none;
-}
+@media screen and (max-width: 768px) {
+  .description__intro {
+    font-size: 28px;
+    margin-right: 0;
+  }
 
+  .description__game-photo {
+    right: 0;
+    bottom: 0;
+  }
+
+  .description__image_mob_view {
+    display: block;
+    margin: 24px 0;
+  }
+  
+  .description__image_mob_hidden {
+    display: none;
+  }
+}

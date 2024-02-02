@@ -1,16 +1,30 @@
 .steps {
     max-width: 1222px;
     margin: 200px auto;
+    position: relative;
+}
+
+.steps__subtitle {
+    position:absolute;
+    top: 72px;
+    left: 301px;
+    
 }
 
 .steps__list {
     list-style-type: none; 
 	counter-reset: num;
+    margin-top: 54px;
+    
+
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 20px;
 }
 .steps__list-item {
     display: flex;
     align-items: flex-start;
-    background-color:#eaac73;
+    background-image: url(../../images/grid-bg.png);
     padding: 20px;
     font-size: 20px;
     font-weight: 500;
@@ -25,6 +39,7 @@
 .steps__list-item:nth-of-type(7) {
     grid-column: 2/4;
     grid-row: 3/3;
+    position: relative;
 }
 
 .steps__list-item::before {
@@ -35,7 +50,81 @@
     margin-right: 16px;
     border-radius: 60px;
     color: var(--text-main-color);
-    padding: 0 12px;
+    min-width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     counter-increment: num;
     background-color: #fff;
+}
+
+.steps__poster {
+    position: absolute;
+    left: 465px;
+    bottom: 0;
+}
+
+.steps__nav-button {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 44px;
+    height: 44px;
+    background-size: contain;
+}
+
+
+.steps__nav-button_left {
+    background-image: url(../../images/carousel-button-left.svg);
+}
+
+.steps__nav-button_right {
+    background-image: url(../../images/carousel-button-right.svg);
+}
+
+@media screen and (max-width: 768px) {
+    .steps {
+        max-width: calc(100% - 40px);
+    }
+    .steps__subtitle{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .steps__list-container {
+        overflow: hidden;
+        /*max-width: calc(100% - 40px);*/
+        margin: 148px auto;
+    }
+
+    .steps__list {
+        grid-template-columns: repeat(5, 100%);
+        grid-template-rows: 150px 150px;
+        grid-auto-flow: column;
+        gap: 0;
+        margin: 0;
+    }
+
+    .steps__list-item:nth-of-type(3)  {
+        grid-column: auto;
+        grid-row: auto;
+        grid-row: span 2;
+    }
+    .steps__list-item:nth-of-type(6)  {
+        grid-column: auto;
+        grid-row: auto;
+        grid-row: span 2;
+    }
+    .steps__list-item:nth-of-type(7)  {
+        position: initial;
+        grid-column: auto;
+        grid-row: span 2;
+    }
+    .steps__poster {
+        top: 176px;
+        left: 0;
+        width: 335px;
+    }
 }

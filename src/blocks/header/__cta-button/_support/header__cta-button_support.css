@@ -1,0 +1,16 @@
+.header__cta-button_support {
+    background-color: #1f1f1f;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.header__cta-button_support:hover {
+    background-color: #FBCE51;
+    color: #1f1f1f;
+}
+
+@media screen and (max-width: 768px) {
+    .header__cta-button_support {
+      margin-right: 0;
+    }
+  }

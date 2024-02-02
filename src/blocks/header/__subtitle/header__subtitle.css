@@ -7,4 +7,9 @@
     max-width: 542px;
    
   }
-  
+
+  @media screen and (max-width: 768px) {
+    .header__subtitle {
+      text-align: left;
+    }
+  }

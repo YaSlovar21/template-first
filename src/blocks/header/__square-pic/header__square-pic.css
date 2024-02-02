@@ -5,5 +5,5 @@
     height: 660px;
     width: 660px;
     background-image: url(../../../images/rotate-img.svg);
-    
+    z-index: 1;
   }

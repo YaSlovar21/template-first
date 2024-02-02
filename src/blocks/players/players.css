@@ -1,3 +1,53 @@
 .players {
+    max-width: 1222px;
+    margin: 0 auto 140px;
+    position: relative;
+}
+
+.players__nav-button {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 44px;
+    height: 44px;
+    background-size: contain;
+}
+
+.players__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 151px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-main-color);
+
+    position: absolute;
+    top: 10px;
+    right: 0;
     
+}
+
+.players__nav-button_left {
+    background-image: url(../../images/carousel-button-left.svg);
+}
+
+.players__nav-button_right {
+    background-image: url(../../images/carousel-button-right.svg);
+}
+
+@media screen and (max-width: 768px) {
+    .players {
+        max-width: calc(100% - 40px);
+    }
+    .players__nav-button {
+
+        width: 36px;
+        height: 36px;
+    }
+
+    .players__pagination {
+        position: relative;
+        margin: 40px auto;
+    }
 }

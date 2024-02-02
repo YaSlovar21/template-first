@@ -1,9 +1,8 @@
 .header {
     position: relative;
     height: 100vh;
-    min-height: 600px;
-    max-height: 756px;
-    background: #E9DED4 url('../../images/header-bg.png');
+    height: 700px;
+    background: #E9DED4 url('../../images/bg-header.png');
     /* выше установили ограничения для секции */
    
   }

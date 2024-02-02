@@ -11,10 +11,15 @@
 <body class="page">
   <%= require('html-loader!./inner-metrika.html').default %>
   <header class="header">
-    <img class="logo logo_place_header" src="<%=require('./images/logo.svg')%>" alt="Шахматный клуб">
-    <h1 class="header__title">Превратите уездный город <span class="block text-center">в столицу</span> <span class="block text-right">земного шара</span></h1>
-    <p class="header__subtitle">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</p>
-    <div class="header__square-pic rotation"></div>
+    <div class="header__content">
+      <img class="logo logo_place_header" src="<%=require('./images/logo.svg')%>" alt="Шахматный клуб">
+      <h1 class="header__title">Превратите уездный город <span class="block text-center">в столицу</span> <span class="block text-right">земного шара</span></h1>
+      <p class="header__subtitle">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</p>
+      <nav class="header__nav">
+        <a class="header__cta-button header__cta-button_support" href="#support">Поддержать шахматную мысль</a>
+        <a class="header__cta-button header__cta-button_details" href="#details">Подробнее о турнире</a>
+      </nav>
+    </div>
   </header>
   <main>
     <div class="promoline w-full bg-[--span-orange] overflow-hidden">
@@ -28,12 +33,12 @@
       </div>
     </div>
     <section class="description">
-      <div class="flex items-center justify-between">
-        <p class="description__intro">Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: <span class="description__span">«Плодотворная дебютная идея»</span></p>
-        <img class="description__image" src="<%=require('./images/desc-img.png')%>" alt="Шахматная партия">
+      <div class="description__first" id="support">
+        <p class="description__intro">Чтобы поддержать Международный васюкинский турнир <img class="description__image description__image_mob_view" src="<%=require('./images/desc-img.png')%>" alt="Шахматная партия"> посетите лекцию на тему: <span class="description__span">«Плодотворная дебютная идея»</span></p>
+        <img class="description__image description__image_mob_hidden" src="<%=require('./images/desc-img.png')%>" alt="Шахматная партия">
       </div>
-      <div class="description__event-details flex">
-        <img src="<%=require('./images/desc-game.png')%>" alt="Партия">
+      <div class="description__event-details" id="details">
+        <img class="description__game-photo" src="<%=require('./images/desc-game.png')%>" alt="Партия">
         <div>
           <p class="description__intro">И сеанс <span class="description__span">одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера</p>
           <table class="description__table tablee">
@@ -55,7 +60,7 @@
             </tr>
             <tr class="tablee__last-row">
               <th>Взнос на телеграммы:</th>
-              <td><span>100 руб.</span>21 руб. 16 коп.</td>
+              <td><span class="description__sto">100 руб.</span> 21 руб. 16 коп.</td>
             </tr>
           </table>
           <p class="section-subtitle">По всем вопросам обращаться в администрацию к К. Михельсону</p>
@@ -65,26 +70,92 @@
 
     <section class="steps">
       <h2 class="section-title">Этапы преображения Васюков</h2>
-      <p class="section-subtitle section-subtitle_steps">Будущие источники обогащения васюкинцев</p>
-      <ol class="steps__list grid grid-cols-3 gap-[20px]">
-        <li class="steps__list-item">Строительство железнодорожной магистрали Москва-Васюки</li>
-        <li class="steps__list-item">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</li>
-        <li class="steps__list-item">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</li>
-        <li class="steps__list-item">Строительство дворца для турнира</li>
-        <li class="steps__list-item">Размещение гаражей для гостевого автотранспорта</li>
-        <li class="steps__list-item">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</li>
-        <li class="steps__list-item">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</li>
-      </ol>
+      <p class="section-subtitle section-subtitle_steps steps__subtitle">Будущие источники обогащения васюкинцев</p>
+      <div class="steps__list-container">
+        <ol class="steps__list">
+          <li class="steps__list-item">Строительство железнодорожной магистрали Москва-Васюки</li>
+          <li class="steps__list-item">Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов</li>
+          <li class="steps__list-item">Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</li>
+          <li class="steps__list-item">Строительство дворца для турнира</li>
+          <li class="steps__list-item">Размещение гаражей для гостевого автотранспорта</li>
+          <li class="steps__list-item">Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</li>
+          <li class="steps__list-item">
+            <span class="max-w-[446px]">Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн</span>
+            <img class="steps__poster" src="<%=require('./images/samolet.png')%>" alt="Самолет в Сан-франциско">
+          </li>
+        </ol>
+      </div>
+      <div class="steps__pagination">
+        <button class="steps__nav-button steps__nav-button_left mr-auto"></button>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <button class="steps__nav-button steps__nav-button_right ml-auto"></button>
+      </div>
     </section>
     <section class="players">
       <h2 class="section-title">Участники турнира</h2>
+      <div class="overflow-hidden mt-[60px]">
+        <ul class="flex justify-center mx-auto players-container">
+          <li class="card">
+            <img src="<%=require('./images/default-player-ava.png')%>" alt="Участник">
+            <h3 class="card__title">Хозе-Рауль Капабланка</h3>
+            <p class="card__desc">Чемпион мира по шахматам</p>
+            <a class="card__link" href="#">Подробнее</a>
+          </li>
+          <li class="card">
+            <img src="<%=require('./images/default-player-ava.png')%>" alt="Участник">
+            <h3 class="card__title">Эммануил Ласкер</h3>
+            <p class="card__desc">Чемпион мира по шахматам</p>
+            <a class="card__link" href="#">Подробнее</a>
+          </li>
+          <li class="card">
+            <img src="<%=require('./images/default-player-ava.png')%>" alt="Участник">
+            <h3 class="card__title">Александр Алехин</h3>
+            <p class="card__desc">Чемпион мира по шахматам</p>
+            <a class="card__link" href="#">Подробнее</a>
+          </li>
+          <li class="card">
+            <img src="<%=require('./images/default-player-ava.png')%>" alt="Участник">
+            <h3 class="card__title">Арон Нимцович</h3>
+            <p class="card__desc">Чемпион мира по шахматам</p>
+            <a class="card__link" href="#">Подробнее</a>
+          </li>
+          <li class="card">
+            <img src="<%=require('./images/default-player-ava.png')%>" alt="Участник">
+            <h3 class="card__title">Рихард Рети</h3>
+            <p class="card__desc">Чемпион мира по шахматам</p>
+            <a class="card__link" href="#">Подробнее</a>
+          </li>
+          <li class="card">
+            <img src="<%=require('./images/default-player-ava.png')%>" alt="Участник">
+            <h3 class="card__title">Остап Бендер</h3>
+            <p class="card__desc">Гроссмейстер</p>
+            <a class="card__link" href="#">Подробнее</a>
+          </li>
+        </ul>
+      </div>
+      <div class="players__pagination">
+        <button class="players__nav-button players__nav-button_left mr-auto"></button>
+        <span class="current-players-step">2</span>
+        <span class="ml-[1px] mr-[1px] opacity-60">/</span>
+        <span class="opacity-60">6</span>
+        <button class="players__nav-button players__nav-button_right ml-auto"></button>
+      </div>
     </section>
 
   </main>
   <footer class="footer">
     <p class="footer__content">Все персонажи, события и цитаты являются вымышленными и не принадлежат создателям сайта. С подробностями можно познакомиться в главе XXXIV романа Ильи Ильфа и Евгения Петрова «Двенадцать стульев».</p>
   </footer>
-
+  <template id="player-template">
+    <li class="card">
+      <img class="card__image" src="<%=require('./images/default-player-ava.png')%>" alt="Участник">
+      <h3 class="card__title">Арон Нимцович</h3>
+      <p class="card__desc">Чемпион мира по шахматам</p>
+      <a class="card__link" href="#">Подробнее</a>
+    </li>
+  </template>
   
 </body>
 </html>

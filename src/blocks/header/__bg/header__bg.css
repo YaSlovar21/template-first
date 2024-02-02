@@ -1,0 +1,8 @@
+.header__bg {
+    position: absolute;
+    width: 1920px;
+    height: 700px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
