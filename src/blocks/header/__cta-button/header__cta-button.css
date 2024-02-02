@@ -1,16 +1,18 @@
 .header__cta-button {
-    padding: 20px 49px;
+    padding: 15px 49px;
     border-radius: 66px;
     font-size: 16px;
     line-height: 1.3;
     font-weight: 500;
     transition: background-color .4s ease-in, color .4s ease-in;
     text-align: center;
+    max-width: 264px;
 }
 
 @media screen and (max-width: 768px) {
     .header__cta-button {
-        padding: 18px 43px;
+        padding: 14px 23px;
+        max-width: 100%;
     }
 }
 

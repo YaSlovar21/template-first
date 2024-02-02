@@ -7,5 +7,7 @@
 @media screen and (max-width: 1024px) {
     .description__first {
         flex-direction: column;
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
     }
 }

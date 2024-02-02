@@ -2,12 +2,13 @@
 .description__event-details { 
     display: flex;
     margin-top: 64px;
+    
 }
 
 @media screen and (max-width: 1024px) {
     .description__event-details {
         flex-direction: column;
-        margin-top: 34px;
+        margin-top: 25px;
     }
 }
   

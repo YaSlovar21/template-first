@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 1024px) {
     .description {
-        max-width: calc(100% - 40px);
+        
         margin-top: 48px;
     }
 }
@@ -24,6 +24,9 @@
   font-weight: 400;
   max-width: 764px;
   margin-right: 32px;
+}
+.description__intro_det {
+  margin-right: 0;
 }
 
 .description__span {
@@ -42,8 +45,8 @@
 
 .description__game-photo {
   position: relative;
-  right: 60px;
-  bottom: 40px;
+  right: 27px;
+  bottom: 45px;
 }
 
 .description__sto{
@@ -64,15 +67,25 @@
   
 }
 
+
+.description__time {
+  max-width: 704px;
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
   .description__intro {
     font-size: 28px;
     margin-right: 0;
   }
 
+  .description__time {
+    max-width: calc(100% - 40px);
+    margin: 10px auto;
+  }
+
   .description__game-photo {
     right: 0;
-    bottom: 0;
+    bottom: 5px;
   }
 
   .description__image_mob_view {

@@ -23,11 +23,11 @@
   </header>
   <main>
     <div class="promoline w-full bg-[--span-orange] overflow-hidden">
-      <div class="promoline__item flex w-[200%] uppercase text-cyan-50">
-        <span class="w-full whitespace-nowrap"> Дело помощи утопающим — дело рук самих утопающих!
+      <div class="promoline__item ">
+        <span class="w-full whitespace-nowrap min-w-[100%] marquee"> Дело помощи утопающим — дело рук самих утопающих!
         Шахматы двигают вперед не только культуру, но и экономику!
         Лед тронулся, господа присяжные заседатели!</span>
-        <span class="w-full whitespace-nowrap">>Дело помощи утопающим — дело рук самих утопающих! 
+        <span class="w-full whitespace-nowrap  min-w-[100%] marquee">>Дело помощи утопающим — дело рук самих утопающих! 
         Шахматы двигают вперед не только культуру, но и экономику!
         Лед тронулся, господа присяжные заседатели!</span>
       </div>
@@ -39,9 +39,10 @@
       </div>
       <div class="description__event-details" id="details">
         <img class="description__game-photo" src="<%=require('./images/desc-game.png')%>" alt="Партия">
-        <div>
-          <p class="description__intro">И сеанс <span class="description__span">одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера</p>
+        <div class="description__time ">
+          <p class="description__intro description__intro_det">И сеанс <span class="description__span">одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера</p>
           <table class="description__table tablee">
+            <tbody>
             <tr  class="tablee__first-row">
               <th>Место проведения:</th>
               <td>Клуб «Картонажник»</td>
@@ -50,6 +51,8 @@
               <th>Дата и время мероприятия:</th>
               <td>22 июня 1927 г. в 18:00</td>
             </tr>
+          </tbody>
+          <tbody class="tablee__specmod">
             <tr>
               <th>Стоимость входных билетов:</th>
               <td>20 коп.</td>
@@ -58,10 +61,13 @@
               <th>Плата за игру:</th>
               <td>50 коп.</td>
             </tr>
+          </tbody>
+          <tfoot>
             <tr class="tablee__last-row">
               <th>Взнос на телеграммы:</th>
               <td><span class="description__sto">100 руб.</span> 21 руб. 16 коп.</td>
             </tr>
+          </tfoot>
           </table>
           <p class="section-subtitle">По всем вопросам обращаться в администрацию к К. Михельсону</p>
         </div>

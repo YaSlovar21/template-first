@@ -1,6 +1,6 @@
 .steps {
     max-width: 1222px;
-    margin: 200px auto;
+    margin: 115px auto 200px;
     position: relative;
 }
 
@@ -27,8 +27,9 @@
     display: flex;
     align-items: flex-start;
     background-image: url(../../images/grid-bg.png);
-    padding: 20px;
+    padding: 20px 21px;
     font-size: 20px;
+    line-height: 1.2;
     font-weight: 500;
     color: var(--text-main-color);
 }
@@ -141,7 +142,7 @@
     .steps__list-container {
         overflow: hidden;
         /*max-width: calc(100% - 40px);*/
-        margin: 148px auto;
+        margin: 148px auto 0;
     }
 
     .steps__list {

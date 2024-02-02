@@ -22,6 +22,7 @@
     color: #151515;
     opacity: .6;
     margin-top: 6px;
+    font-size: 20px;
 }
 
 .card__image {
@@ -37,7 +38,7 @@
     font-size: 16px;
     font-weight: 500;
 
-    margin-top: 20px;
+    margin-top: 17px;
     border: 1px solid var(--theme-blue);
     border-radius: 62px;
 
@@ -53,9 +54,16 @@
     .card {
         width: 335px;
     }
+    .card__desc{
+        margin-top: 9px;
+    }
     .card__image {
         width: 244px;
         height: 244px;
+    }
+    .card__link {
+        padding: 7px 11px;
+        margin-top: 20px;
     }
     
 }

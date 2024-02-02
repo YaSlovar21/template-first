@@ -7,12 +7,13 @@
     text-transform: uppercase;
     font-weight: 400;
     max-width: 542px;
+    margin: 62px 0 24px;
   }
   
 
   @media screen and (max-width: 768px) {
     .header__title {
-      
+      margin-top: 40px;
       font-size: 36px;
     }
   }

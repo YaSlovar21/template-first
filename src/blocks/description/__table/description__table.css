@@ -35,13 +35,13 @@
   
   
   .description__table tr:last-of-type {
-    border-bottom: none;
+    /*border-bottom: none;*/
   }
 
   @media screen and (max-width: 768px) {
     .description__table {
       margin-top: 44px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
     }
     .description__table tr {
         display: flex;

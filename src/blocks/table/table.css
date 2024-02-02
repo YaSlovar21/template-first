@@ -10,12 +10,31 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .tablee__specmod {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .tablee__specmod tr:nth-child(2) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .tablee__specmod tr:nth-child(2) td {
+        padding-top: 16px;
+        padding-bottom: 12px;
+    }
+    .tablee__specmod tr:nth-child(2) th {
+        min-width: 153px;
+        padding-right: 10px;
+    }
     .tablee .tablee__last-row td, .tablee .tablee__last-row th{
         padding-bottom: 16px;
     }
     
     .tablee .tablee__first-row td, .tablee .tablee__first-row th{
-        padding-top: 16px;
+       /* padding-top: 16px;8*/
     }
     
 }
