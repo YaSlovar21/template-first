@@ -125,7 +125,7 @@
 @media screen and (max-width: 768px) {
     .steps {
         max-width: calc(100% - 40px);
-        margin: 120px auto;
+        margin: 120px auto 122px;
     }
     .steps__subtitle{
         position: relative;
@@ -153,6 +153,13 @@
         margin: 0;
     }
 
+    .steps__list-item {
+        font-size: 18px;
+        padding-top: 62px;
+    }
+    .steps__list-item:nth-of-type(2), .steps__list-item:nth-of-type(5) {
+        padding-top: 22px;
+    }
     .steps__list-item:nth-of-type(3)  {
         grid-column: auto;
         grid-row: auto;

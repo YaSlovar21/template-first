@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 //const {bpages} = require('./bpages');
 
 
-const canonicalURL = 'https://fedyaevroman.ru'
+const canonicalURL = 'https://ya-ostap.kupcov.com'
 const SitemapPlugin = require('sitemap-webpack-plugin').default;
 const {paths} = require('./sitemap');
 
@@ -34,7 +34,7 @@ function generateArticleHtmlPlugins() {
 module.exports = {
   entry: { 
     index: './src/pages/index.js', 
-    all: './src/pages/all.js'
+    
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -106,28 +106,9 @@ module.exports = {
       },
       title: "Международный васюкинский турнир по шахматам",
       template: './src/index.html', // путь к файлу index.html
-      chunks: ['index', 'all'],
+      chunks: ['index'],
     }),
-    new HtmlWebpackPlugin({
-      templateParameters: {
-        canonicalURL,
-        contentName: 'proektirovsh.html',
-      },
-      title: "Для проектировщиков",
-      template: './src/prose.html', // путь к файлу index.html
-      filename: 'proektirovshchikam/index.html',
-      chunks: ['index', 'all'],
-    }),
-    new HtmlWebpackPlugin({
-      templateParameters: {
-        canonicalURL,
-        contentName: 'prose.html',
-      },
-      title: "Типографика проекта",
-      template: './src/prose.html', // путь к файлу index.html
-      filename: 'typography/index.html',
-      chunks: ['index', 'all'],
-    }),
+    
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css'

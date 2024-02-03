@@ -51,7 +51,7 @@
 @media screen and (max-width: 768px) {
     .players {
         max-width: calc(100% - 40px);
-        margin-bottom: 100px;
+        margin-bottom: 110px;
     }
 
     .players__cards-container {

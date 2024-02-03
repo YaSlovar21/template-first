@@ -8,11 +8,4 @@ module.exports.paths = [
       priority: 1,
       changefreq: 'monthly'
     },
-    {
-      path: '/proektirovshchikam/',
-      lastmod: dateNow,
-      priority: 0.8,
-      changefreq: 'monthly'
-    },
-     
 ];

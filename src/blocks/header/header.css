@@ -13,3 +13,9 @@
       height: 774px;
     }
   }
+
+  @media screen and (max-width: 400px) {
+    .header {
+      background-image: url(../../images/bg-main-mobile.png);
+    }
+  }

@@ -1,11 +1,25 @@
+.promoline {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--span-orange);
+}
+
+.promoline__svg {
+  display: inline-block;
+  margin-right: 12px;
+  margin-left: 9px;
+  color: #fff;  
+}
+
 .promoline__item {
    font-family: 'Merriweather';
    font-size: 22px;
    padding: 18px 0;
    position: relative;
    display: flex;
-   overflow: hidden;
-   gap: 20px;
+   text-transform: uppercase;
+   /*gap: 20px;*/
+   color: #fff;
 }
 .marquee {
     animation: scroll 10s linear infinite;
@@ -22,7 +36,7 @@
       transform: translateX(0);
     }
     to {
-      transform: translateX(calc(-100% - 20px));
+      transform: translateX(calc(-100%));
     }
   }
   

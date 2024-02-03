@@ -14,10 +14,11 @@ const leftPlayersButton = document.querySelector('.players__nav-button_left');
 let windowSize = window.innerWidth;
 
 
-function addCard(name, titul) {
+function addCard(name, titul, i=0) {
     const cardElement = playerTemplate.querySelector('.card').cloneNode(true);
     cardElement.querySelector('.card__title').textContent = name;
     cardElement.querySelector('.card__desc').textContent = titul;
+    cardElement.classList.add('animated', 'fadeInRight', `delay-${i}s`);
     playersContainer.append(cardElement);
 }
 
@@ -32,8 +33,8 @@ function downStep(step) {
 function updateSlidesAndPags() {
     stepNavNumber.textContent = step + 1;
     playersContainer.innerHTML= '';
-    getArr(step).forEach(element => {
-        addCard(element.name, element.titul);
+    getArr(step).forEach((element, i) => {
+        addCard(element.name, element.titul, i);
     });
 }
 
@@ -45,12 +46,12 @@ function getArr(index) {
 
 let step = 1; //2
 updateSlidesAndPags();
-/*
+
 setInterval(()=>{
     step = upStep(step);
     updateSlidesAndPags();
 }, 4000);
-*/
+
 rightPlayersButton.addEventListener('click', ()=> {
     step = upStep(step);
     updateSlidesAndPags();

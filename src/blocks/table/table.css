@@ -9,6 +9,10 @@
     padding-top: 0;
 }
 
+.tablee tfoot tr {
+    border-bottom: none;
+}
+
 @media screen and (max-width: 768px) {
 
     .tablee__specmod {

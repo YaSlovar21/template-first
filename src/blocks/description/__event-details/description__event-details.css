@@ -1,7 +1,9 @@
 
 .description__event-details { 
     display: flex;
-    margin-top: 64px;
+    max-width: 1242px;
+    margin: 64px auto 0;
+    padding-right: 10px;
     
 }
 
